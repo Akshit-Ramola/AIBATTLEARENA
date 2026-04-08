@@ -1,14 +1,14 @@
 # AI Battle Arena
 
-AI Battle Arena is a modern, full-stack application that pits two separate Large Language Models against each other to solve user-provided problems. To ensure fairness, a third "Judge AI" evaluates both solutions and provides a definitive rating (out of 10) along with its detailed reasoning. 
+AI Battle Arena is a modern, full-stack application that pits two separate Large Language Models against each other to solve user provided problems. To ensure fairness, a third "Judge AI" evaluates both solutions and provides a definitive rating (out of 10) along with its detailed reasoning. 
 
-This repository serves as an educational and functional example of how to orchestrate multi-agent LLM workflows gracefully inside a LangGraph infrastructure.
+This repository serves as an educational and functional example of how to orchestrate multi agent LLM workflows gracefully inside a LangGraph infrastructure.
 
 ## Project Architecture
 
 The project is split horizontally into two halves:
 1. **Frontend**: A minimal, dark-mode focused React interface where users can chat and review judgments.
-2. **Backend**: An Express.js server tightly integrated with LangChain and LangGraph for robust multi-agent orchestration.
+2. **Backend**: An Express.js server tightly integrated with LangChain and LangGraph for robust multi agent orchestration.
 
 ---
 
@@ -16,7 +16,7 @@ The project is split horizontally into two halves:
 The backend operates a tightly controlled StateGraph that handles sequential and parallel AI calls logic seamlessly. 
 - **Express.js & TypeScript**: Core HTTP server and API routing.
 - **LangChain Core (`@langchain/core`)**: For interacting programmatically and building the templates with the AI models.
-- **LangGraph (`@langchain/langgraph`)**: Orchestrates the multi-agent design flow. It sends the problem to both "Model 1" and "Model 2" simultaneously, and subsequently triggers the "Judge Node" to parse and critique both outputs structurally.
+- **LangGraph (`@langchain/langgraph`)**: Orchestrates the multi agent design flow. It sends the problem to both "Model 1" and "Model 2" simultaneously, and subsequently triggers the "Judge Node" to parse and critique both outputs structurally.
 - **AI Providers integration**:
   - `@langchain/google` (Gemini API) -> Utilized heavily for processing.
   - `@langchain/cohere` (Cohere API)
